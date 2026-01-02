@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Online Quiz Platform</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .quiz-box {
+        background: white;
+        width: 400px;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        text-align: center;
+        color: #ff4b5c;
+    }
+
+    .question {
+        margin: 20px 0;
+        font-weight: bold;
+    }
+
+    label {
+        display: block;
+        padding: 10px;
+        margin: 8px 0;
+        background: #ffecec;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    label:hover {
+        background: #ffb3b3;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        background: #ff4b5c;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .result {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+        color: green;
+    }
+
+    /* CSS logic for result */
+    #q1a:checked ~ #q2b:checked ~ .result {
+        display: block;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="quiz-box">
+    <h1>🎉 Mini Quiz</h1>
+
+    <!-- Question 1 -->
+    <div class="question">1. HTML stands for?</div>
+    <input type="radio" id="q1a" name="q1">
+    <label for="q1a">Hyper Text Markup Language</label>
+
+    <input type="radio" name="q1">
+    <label>High Text Machine Language</label>
+
+    <input type="radio" name="q1">
+    <label>Hyperlinks Text Mark Language</label>
+
+    <!-- Question 2 -->
+    <div class="question">2. Which is a primary color?</div>
+    <input type="radio" id="q2b" name="q2">
+    <label for="q2b">Blue</label>
+
+    <input type="radio" name="q2">
+    <label>Green</label>
+
+    <input type="radio" name="q2">
+    <label>Pink</label>
+
+    <button>Submit</button>
+
+    <div class="result">
+        🎯 Your Score: 2 / 2
+    </div>
+</div>
+
+</body>
+</html>
